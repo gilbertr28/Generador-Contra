@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Contraseñas Seguras</h1>
+        <div class="form-group">
+            <label for="length">Longitud de la contraseña:</label>
+            <input type="number" id="length" min="4" max="32" value="12">
+        </div>
+        <button class="generate-btn" onclick="generarContrasena()">Generar Contraseña</button>
+        <div class="output">
+            <input type="text" id="password" readonly>
+            <button class="copy-btn" onclick="copiarContrasena()">Copiar</button>
+        </div>
+        <div id="securityLevel" class="security-level">Nivel de seguridad: </div>
+    </div>
+    <script src="Generador-Contra.js"></script>
+</body>
+</html>
+
+
