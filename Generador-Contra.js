@@ -13,10 +13,10 @@ function generarContrasena() {
 }
 
 function copiarContrasena() {
-    const passwordField = document.getElementById("password");
-    passwordField.select();
-    document.execCommand("copy");
-    alert("¡Contraseña copiada al portapapeles!");
+    const password = document.getElementById("password").value; // Obtiene el valor
+    navigator.clipboard.writeText(password) // Copia al portapapeles
+        .then(() => alert("¡Contraseña copiada al portapapeles!"))
+        .catch(err => console.error("Error al copiar: ", err));
 }
 
 function evaluarSeguridad(contrasena) {
